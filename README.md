@@ -20,11 +20,14 @@ Sensors: [http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors](h
 ### Sample cURL Commands 
 
 #### Rooms
-GET 
+GET ```200 OK```
 ```
 http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/rooms
 ```
-POST
+POST ```204 No Content```
+```
+http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/rooms
+```
 ```
 {
   "id":"CAF-001",
@@ -33,25 +36,32 @@ POST
   "sensorIds":[]
 }
 ```
-GET
+GET ```200 OK```
 ```
 http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/rooms/CAF-001
 ```
-DELETE
+DELETE ```204 No Content```
 ```
 http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/rooms/CAF-001
+```
+DELETE ```409 Conflict```
+```
+http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/rooms/LIB-301
 ```
 
 #### Sensors
-GET
+GET ```200 OK```
 ```
 http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors
 ```
-GET
+GET ```200 OK```
 ```
 http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors/OCC-010
 ```
-POST
+POST ```204 No Content```
+```
+http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors
+```
 ```
 {
   "id":"TEMP-012",
@@ -61,11 +71,14 @@ POST
   "roomId":"LAB-105"
 }
 ```
-DELETE
+DELETE ```204 No Content```
 ```
 http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors/TEMP-012
 ```
-POST
+POST ```422 Unprocessable Entity```
+```
+http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors
+```
 ```
 {
   "id":"CO2-002",
@@ -76,6 +89,37 @@ POST
 }
 ```
 
+#### Readings
+GET ```200 OK```
+```
+http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors/TEMP-011/readings
+```
+POST ```204 No Content```
+```
+http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors/TEMP-011/readings
+```
+```
+{
+  "id":"READ-002",
+  "timestamp":1767225600,
+  "value":23
+}
+```
+GET ```200 OK```
+```
+http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors/CO2-001/readings
+```
+POST ```403 Forbidden```
+```
+http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors/CO2-001/readings
+```
+```
+{
+  "id":"READ-001",
+  "timestamp":1767225600,
+  "value":20
+}
+```
 
 ## Report 
 
