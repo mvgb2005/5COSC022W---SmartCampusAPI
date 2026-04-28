@@ -12,6 +12,11 @@ SmartCampusAPI is a RESTful web service developed using Java 11, JAX-RS (Jersey)
 
 ## Run 
 
+### URLs
+Base: [http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/](http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/)  
+Rooms: [http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/rooms](http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/rooms)  
+Sensors: [http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors](http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors)  
+
 ### Sample cURL Commands 
 
 ## Report 
