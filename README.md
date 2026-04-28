@@ -1,6 +1,6 @@
 # 5COSC022W - SmartCampusAPI 
-Name: Mohul Biswas 
-ID: w1979854 
+Name: Mohul Biswas  
+ID: w1979854  
 
 ## Contents
 - [Overview](#overview)
@@ -18,6 +18,64 @@ Rooms: [http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/rooms](http:
 Sensors: [http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors](http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors)  
 
 ### Sample cURL Commands 
+
+#### Rooms
+GET 
+```
+http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/rooms
+```
+POST
+```
+{
+  "id":"CAF-001",
+  "name":"Cafeteria",
+  "capacity":50,
+  "sensorIds":[]
+}
+```
+GET
+```
+http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/rooms/CAF-001
+```
+DELETE
+```
+http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/rooms/CAF-001
+```
+
+#### Sensors
+GET
+```
+http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors
+```
+GET
+```
+http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors/OCC-010
+```
+POST
+```
+{
+  "id":"TEMP-012",
+  "type":"Temperature",
+  "status":"ACTIVE",
+  "currentValue":34,
+  "roomId":"LAB-105"
+}
+```
+DELETE
+```
+http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors/TEMP-012
+```
+POST
+```
+{
+  "id":"CO2-002",
+  "type":"CO2",
+  "status":"OFFLINE",
+  "currentValue":0,
+  "roomId":"INVALID"
+}
+```
+
 
 ## Report 
 
