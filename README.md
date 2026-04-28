@@ -105,10 +105,6 @@ http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors/TEMP-011/rea
   "value":23
 }
 ```
-GET ```200 OK```
-```
-http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors/CO2-001/readings
-```
 POST ```403 Forbidden```
 ```
 http://localhost:8080/Tutorial_Week09_DAO-1.0-SNAPSHOT/rest/sensors/CO2-001/readings
